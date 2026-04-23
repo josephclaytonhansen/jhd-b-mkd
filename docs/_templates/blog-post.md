@@ -1,6 +1,6 @@
 ---
 title: {{title}}
-date: {{date}} {{time}}
+date: {{date}} {{time}}:00
 slug: {{title}}
 publish: false
 description: 

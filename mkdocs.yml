@@ -1,0 +1,50 @@
+site_name: My Knowledge Base
+site_description: Personal knowledge base and blog powered by MkDocs
+site_author: JHD
+site_url: https://example.com
+
+theme:
+  name: shadcn
+
+plugins:
+  - search
+  - pub-meta:
+      publish:
+        file_default: draft
+        file_warn_on_missing: false
+        dir_default: published
+  - pub-blog:
+      slug: blog
+      teaser_marker: "<!-- more -->"
+      posts_per_page: 5
+  - pub-obsidian:
+      obsidian_dir: .obsidian
+      templates_dir: _templates
+      backlinks:
+        enabled: true
+      callouts:
+        enabled: true
+      links:
+        wikilinks_enabled: true
+        img_lazy: true
+  - link-marker:
+      enable_external_link: true
+      icon_external_link: "⧉"
+      enable_mail: true
+      icon_mail: "✉"
+  - caption
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - fenced_code
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true

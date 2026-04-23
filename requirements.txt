@@ -1,0 +1,4 @@
+mkdocs-shadcn
+mkdocs-publisher
+mkdocs-caption
+mkdocs-link-marker

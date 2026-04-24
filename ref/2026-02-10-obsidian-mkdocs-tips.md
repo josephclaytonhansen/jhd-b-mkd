@@ -5,11 +5,7 @@ slug: writing-better-docs-obsidian-mkdocs
 publish: false
 description: Tips for using Obsidian features that work seamlessly with MkDocs Publisher.
 tags:
-  - obsidian
-  - workflow
-  - markdown
 categories:
-  - guides
 ---
 
 # Writing Better Docs with Obsidian and MkDocs

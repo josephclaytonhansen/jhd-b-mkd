@@ -2,8 +2,8 @@
 publish: 'true'
 search:
   exclude: true
-slug: .
-title: Blog
+slug: production
+title: Category - music-production
 
 ---
 

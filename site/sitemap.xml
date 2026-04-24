@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://blog.josephhansen.dev/blog/hello-world/</loc>
+         <loc>https://blog.josephhansen.dev/blog/baroquification/</loc>
          <lastmod>2026-04-23</lastmod>
     </url>
     <url>
          <loc>https://blog.josephhansen.dev/</loc>
-         <lastmod>2026-04-23</lastmod>
+         <lastmod>2026-04-24</lastmod>
     </url>
     <url>
          <loc>https://blog.josephhansen.dev/blog/archive/2026/</loc>
-         <lastmod>2026-04-23</lastmod>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.josephhansen.dev/blog/categories/music-production/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.josephhansen.dev/blog/tags/Fetty-Wap/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.josephhansen.dev/blog/tags/blue-cheese/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.josephhansen.dev/blog/tags/work-stuff/</loc>
+         <lastmod>2026-04-24</lastmod>
     </url>
 </urlset>

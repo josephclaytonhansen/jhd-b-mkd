@@ -88,6 +88,7 @@
     <link href="css/geist.css" rel="stylesheet">
 
     
+    <link href="stylesheets/blog-custom.css" rel="stylesheet">
     <link href="assets/stylesheets/blog.min.css" rel="stylesheet">
     <link href="assets/stylesheets/blog.min.css.map" rel="stylesheet">
     <link href="assets/stylesheets/obsidian.min.css" rel="stylesheet">
@@ -178,38 +179,70 @@
             <div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
                 <div class="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
                     <div class="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
-    <button onclick="onSearchBarClick(event)" data-slot="dialog-trigger" data-variant="outline" data-size="default" class="inline-flex shrink-0 items-center gap-2 text-sm whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background hover:text-accent-foreground dark:border-input dark:hover:bg-input/50 px-4 py-2 has-[&gt;svg]:px-3 relative h-8 w-full justify-start rounded-lg pl-3 font-normal text-foreground shadow-none hover:bg-muted/50 sm:pr-12 md:w-48 lg:w-56 xl:w-64 dark:bg-card" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_r_1_" data-state="closed">
-        <span class="hidden lg:inline-flex">Search documentation...</span>
-        <span class="inline-flex lg:hidden">Search...</span>
-    </button>
+	<button
+		onclick="onSearchBarClick(event)"
+		data-slot="dialog-trigger"
+		data-variant="outline"
+		data-size="default"
+		class="inline-flex shrink-0 items-center gap-2 text-sm whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 border bg-background hover:text-accent-foreground dark:border-input dark:hover:bg-input/50 px-4 py-2 has-[>svg]:px-3 relative h-8 w-full justify-start rounded-lg pl-3 font-normal text-foreground shadow-none hover:bg-muted/50 sm:pr-12 md:w-48 lg:w-56 xl:w-64 dark:bg-card"
+		type="button"
+		aria-haspopup="dialog"
+		aria-expanded="false"
+		aria-controls="radix-_r_1_"
+		data-state="closed">
+		<span class="hidden lg:inline-flex">Search blog...</span>
+		<span class="inline-flex lg:hidden">Search...</span>
+	</button>
 </div>
-<dialog id="search-dialog" onclick="onSearchDialogClick(event)"
-    class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background rounded-lg shadow-lg border overflow-hidden p-0">
-    <div class="w-lg gap-4">
-        <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground">
-            <div data-slot="command-input-wrapper" class="flex h-9 items-center gap-2 border-b px-3"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-search size-4 shrink-0 opacity-50">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </svg>
-                <input data-slot="command-input"
-                    class="placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Search documentation..." cmdk-input="" autocomplete="off" autocorrect="off"
-                    spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true"
-                    aria-controls="radix-«r1t6»" aria-labelledby="radix-«r1t7»" id="radix-«r1t8»" type="text" value=""
-                    aria-activedescendant="radix-«r1th»" oninput="onInputHandler(event)">
-            </div>
-        </div>
-        <div id="mkdocs-search-results">
-            <!-- search results go there -->
-        </div>
-    </div>
+<dialog
+	id="search-dialog"
+	onclick="onSearchDialogClick(event)"
+	class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background rounded-lg shadow-lg border overflow-hidden p-0">
+	<div class="w-lg gap-4">
+		<div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground">
+			<div data-slot="command-input-wrapper" class="flex h-9 items-center gap-2 border-b px-3">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-search size-4 shrink-0 opacity-50">
+					<circle cx="11" cy="11" r="8"></circle>
+					<path d="m21 21-4.3-4.3"></path>
+				</svg>
+				<input
+					data-slot="command-input"
+					class="placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50"
+					placeholder="Search blog..."
+					cmdk-input=""
+					autocomplete="off"
+					autocorrect="off"
+					spellcheck="false"
+					aria-autocomplete="list"
+					role="combobox"
+					aria-expanded="true"
+					aria-controls="radix-r1t6"
+					aria-labelledby="radix-r1t7"
+					id="radix-r1t8"
+					type="text"
+					value=""
+					aria-activedescendant="radix-r1th"
+					oninput="onInputHandler(event)" />
+			</div>
+		</div>
+		<div id="mkdocs-search-results">
+			<!-- search results go there -->
+		</div>
+	</div>
 </dialog>
 <script>
-    document.removeEventListener("keydown", searchShortcutHandler);
-    document.addEventListener("keydown", searchShortcutHandler);
+	document.removeEventListener("keydown", searchShortcutHandler)
+	document.addEventListener("keydown", searchShortcutHandler)
 </script>
                 </div>
                 
@@ -322,25 +355,32 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <h2 id="hello-world"><a href="https://blog.josephhansen.dev/blog/hello-world/">Hello World ⧉</a><a class="headerlink" href="#hello-world" title="Permanent link">¶</a></h2>
+    <div class="post-card" data-category="music-production"><a class="post-category-bar" href="/blog/categories/music-production/" style="background-color:#C2D099" title="music-production" aria-label="Category: music-production"></a><div class="post-card-body"><div class="post-card-text"><h2 id="baroquification"><a href="https://blog.josephhansen.dev/blog/baroquification/">Baroquification ⧉</a><a class="headerlink" href="#baroquification" title="Permanent link">¶</a></h2>
 <!--suppress LongLine -->
 <div class="post-extra">
     <div class="col">
-        <p class="post-date">2026-04-23 14:41:00</p>
+        <p class="post-date">April 23rd, 2026</p>
     </div>
     <div class="col">
 
+        <a href="https://blog.josephhansen.dev/blog/tags/blue-cheese/">#blue-cheese ⧉</a>
+
+        <a href="https://blog.josephhansen.dev/blog/tags/work-stuff/">#work-stuff ⧉</a>
+
+        <a href="https://blog.josephhansen.dev/blog/tags/Fetty-Wap/">#Fetty-Wap ⧉</a>
+
     </div>
 </div>
 
-<h1 id="hello-world_1">Hello World<a class="headerlink" href="#hello-world_1" title="Permanent link">¶</a></h1>
+<h1 id="baroquification_1">Baroquification<a class="headerlink" href="#baroquification_1" title="Permanent link">¶</a></h1>
+<p>At work, I was tasked with making the <em>Battle Hymn of the Republic</em> into a Baroque version (interpreted; the word used was actually "harpsichordy"), to be used as background music for a game scene set roughly around that time.</p>
 <div class="post-link">
 
-    <a href="https://blog.josephhansen.dev/blog/hello-world/" title="Hello World">
+    <a href="https://blog.josephhansen.dev/blog/baroquification/" title="Baroquification">
         Read more
     </a>
 
-</div>
+</div></div></div></div>
   </div>
   
   <script>
@@ -389,18 +429,18 @@
         
         
         
-        <a href="#hello-world"
+        <a href="#baroquification"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
-            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#hello-world');">
-            Hello World
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#baroquification');">
+            Baroquification
         </a>
         
 
         
-        <a href="#hello-world_1"
+        <a href="#baroquification_1"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
-            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#hello-world_1');">
-            Hello World
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#baroquification_1');">
+            Baroquification
         </a>
         
 

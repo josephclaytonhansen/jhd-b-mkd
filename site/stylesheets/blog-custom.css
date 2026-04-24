@@ -1,0 +1,170 @@
+
+.typography h2 + .post-card,
+.typography .post-card {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.post-card {
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid hsl(var(--border, 214deg 32% 91%));
+  margin-top: 1.5rem;
+  min-height: 100px;
+}
+
+.post-card:first-of-type {
+  border-top: none;
+  margin-top: 0;
+}
+
+/* Thin colored vertical bar — clickable, links to category */
+.post-category-bar {
+  display: block;
+  width: 5px;
+  min-width: 5px;
+  flex-shrink: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: 14px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  cursor: pointer;
+}
+
+.post-category-bar:hover {
+  opacity: 0.65;
+}
+
+/* Inner body: image (optional, left) + text (right) */
+.post-card-body {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  min-width: 0;
+}
+
+/* Featured image on list pages — sits left of the text */
+.post-card-image {
+  flex: 0 0 44%;
+  max-width: 44%;
+}
+
+.post-card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Text section (title, date, tags, teaser, read-more) */
+.post-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Tighten up pub-blog's internal margins inside the card */
+.post-card-text .post-extra {
+  margin-top: 0.25rem;
+}
+
+/* Override theme's article .typography h2 { margin-top: * 12/20 } */
+article .typography .post-card-text h1,
+article .typography .post-card-text h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 64rem) {
+  article .typography .post-card-text h1,
+  article .typography .post-card-text h2 {
+    margin-top: 0;
+  }
+}
+
+/* Responsive: stack image below text on small screens */
+@media (max-width: 640px) {
+  .post-card-body {
+    flex-direction: column-reverse;
+  }
+
+  .post-card-image {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .post-card-image img {
+    height: 140px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Post detail page: featured image banner
+   -------------------------------------------------------------------------- */
+
+.featured-image-banner {
+  margin: 0 0 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  line-height: 0; /* remove extra whitespace below img */
+}
+
+.featured-image-banner img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Post detail page: clickable tag badges
+   -------------------------------------------------------------------------- */
+
+.post-tags-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.25rem;
+}
+
+.post-tag-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: hsl(var(--muted-foreground, 215deg 16% 47%));
+  background: hsl(var(--muted, 210deg 40% 96%));
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.post-tag-link::before {
+  content: "#";
+  margin-right: 2px;
+  opacity: 0.6;
+}
+
+.post-tag-link:hover {
+  background: hsl(var(--accent, 210deg 40% 90%));
+  color: hsl(var(--accent-foreground, 222deg 47% 11%));
+  border-color: hsl(var(--accent, 210deg 40% 90%));
+}
+
+/* Dark mode adjustments */
+.dark .post-tag-link {
+  background: hsl(var(--muted, 217deg 33% 17%));
+  color: hsl(var(--muted-foreground, 215deg 20% 65%));
+}
+
+.dark .post-tag-link:hover {
+  background: hsl(var(--accent, 217deg 33% 25%));
+  color: hsl(var(--accent-foreground, 210deg 40% 98%));
+}

@@ -2,8 +2,8 @@
 publish: 'true'
 search:
   exclude: true
-slug: .
-title: Blog
+slug: cheese
+title: Tag - blue-cheese
 
 ---
 

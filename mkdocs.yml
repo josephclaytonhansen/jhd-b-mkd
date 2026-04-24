@@ -5,6 +5,13 @@ site_url: https://blog.josephhansen.dev
 
 theme:
   name: shadcn
+  custom_dir: docs/overrides
+
+extra_css:
+  - stylesheets/blog-custom.css
+
+hooks:
+  - docs/hooks.py
 
 plugins:
   - search

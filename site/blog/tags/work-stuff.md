@@ -2,8 +2,8 @@
 publish: 'true'
 search:
   exclude: true
-slug: .
-title: Blog
+slug: stuff
+title: Tag - work-stuff
 
 ---
 

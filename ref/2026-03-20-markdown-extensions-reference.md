@@ -5,10 +5,7 @@ slug: markdown-extensions-reference
 publish: false
 description: A reference for all Markdown extensions configured in this project.
 tags:
-  - markdown
-  - reference
 categories:
-  - reference
 ---
 
 # Markdown Extensions Reference

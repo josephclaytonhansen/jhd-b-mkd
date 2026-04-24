@@ -171,6 +171,38 @@ def _process_post_page(html: str, page) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Strip external-link icon from same-domain links
+# (link-marker plugin treats all http URLs as external, including our own)
+# ---------------------------------------------------------------------------
+
+_EXTERNAL_ICON_PATTERN = re.compile(
+    r'(&nbsp;|\u00a0)\u29c9'  # &nbsp;⧉  (the link-marker icon)
+)
+
+
+def _strip_internal_icons(html: str, site_url: str) -> str:
+    """Remove the ⧉ icon from links that point to the same domain as site_url."""
+    # Normalise: ensure trailing slash, strip scheme for comparison
+    own_domain = re.sub(r'^https?://', '', site_url.rstrip('/').lower())
+
+    def _clean(m: re.Match) -> str:
+        href = m.group(1).lower()
+        href_bare = re.sub(r'^https?://', '', href)
+        if href_bare.startswith(own_domain):
+            # Remove the trailing &nbsp;⧉ that link-marker appended
+            content = _EXTERNAL_ICON_PATTERN.sub('', m.group(2))
+            return f'<a href="{m.group(1)}">{content}</a>'
+        return m.group(0)
+
+    return re.sub(
+        r'<a href="(https?://[^"]+)">(.+?)</a>',
+        _clean,
+        html,
+        flags=re.DOTALL,
+    )
+
+
+# ---------------------------------------------------------------------------
 # MkDocs hook entry point
 # ---------------------------------------------------------------------------
 
@@ -184,5 +216,9 @@ def on_page_content(html, page, config, files):
 
     if is_post_page:
         html = _process_post_page(html, page)
+
+    site_url = config.get("site_url", "")
+    if site_url:
+        html = _strip_internal_icons(html, site_url)
 
     return html

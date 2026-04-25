@@ -170,6 +170,33 @@ def _process_post_page(html: str, page) -> str:
     return html
 
 
+def _inject_cusdis(html: str, page, cusdis_cfg: dict) -> str:
+    """Append Cusdis comment widget to the bottom of a post page."""
+    host = cusdis_cfg.get("host", "https://cusdis.com").rstrip("/")
+    app_id = cusdis_cfg.get("app_id", "")
+    lang = cusdis_cfg.get("lang", "en")
+    if not app_id:
+        return html
+
+    page_id = page.abs_url or page.url or ""
+    page_url = page.canonical_url or page_id
+    page_title = page.title or ""
+
+    widget = (
+        f'<div class="cusdis-comments">'
+        f'<div id="cusdis_thread"'
+        f' data-host="{host}"'
+        f' data-app-id="{app_id}"'
+        f' data-page-id="{page_id}"'
+        f' data-page-url="{page_url}"'
+        f' data-page-title="{page_title}">'
+        f"</div>"
+        f'<script async defer src="{host}/js/widget/lang/{lang}.js"></script>'
+        f"</div>"
+    )
+    return html + widget
+
+
 # ---------------------------------------------------------------------------
 # Strip external-link icon from same-domain links
 # (link-marker plugin treats all http URLs as external, including our own)
@@ -216,6 +243,9 @@ def on_page_content(html, page, config, files):
 
     if is_post_page:
         html = _process_post_page(html, page)
+        cusdis_cfg = config.get("extra", {}).get("cusdis", {})
+        if cusdis_cfg:
+            html = _inject_cusdis(html, page, cusdis_cfg)
 
     site_url = config.get("site_url", "")
     if site_url:

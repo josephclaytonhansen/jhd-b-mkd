@@ -3,6 +3,12 @@ site_description: Joseph Hansen's Blog
 site_author: Joseph Hansen
 site_url: https://blog.josephhansen.dev
 
+extra:
+  cusdis:
+    host: https://cusdis.com
+    app_id: 44e42f15-0a8f-4529-843f-49768839ef37
+    lang: en
+
 theme:
   name: shadcn
   custom_dir: docs/overrides

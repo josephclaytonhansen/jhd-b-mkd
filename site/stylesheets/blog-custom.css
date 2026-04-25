@@ -168,3 +168,13 @@ article .typography .post-card-text h2 {
   background: hsl(var(--accent, 217deg 33% 25%));
   color: hsl(var(--accent-foreground, 210deg 40% 98%));
 }
+
+/* --------------------------------------------------------------------------
+   Cusdis comment widget
+   -------------------------------------------------------------------------- */
+
+.cusdis-comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid hsl(var(--border, 214deg 32% 91%));
+}

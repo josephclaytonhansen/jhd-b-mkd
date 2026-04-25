@@ -183,6 +183,8 @@ def _inject_cusdis(html: str, page, cusdis_cfg: dict) -> str:
     page_title = page.title or ""
 
     widget = (
+        f'<hr class="comments-divider">'
+        f'<h2 class="comments-heading">Comments</h2>'
         f'<div class="cusdis-comments">'
         f'<div id="cusdis_thread"'
         f' data-host="{host}"'

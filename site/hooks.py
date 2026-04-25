@@ -191,7 +191,8 @@ def _inject_cusdis(html: str, page, cusdis_cfg: dict) -> str:
         f' data-page-url="{page_url}"'
         f' data-page-title="{page_title}">'
         f"</div>"
-        f'<script async defer src="{host}/js/widget/lang/{lang}.js"></script>'
+        f'<script>window.CUSDIS_LOCALE = "{lang}";</script>'
+        f'<script async defer src="{host}/js/cusdis.es.js"></script>'
         f"</div>"
     )
     return html + widget

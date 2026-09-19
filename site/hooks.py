@@ -197,7 +197,7 @@ def _inject_cusdis(html: str, page, cusdis_cfg: dict) -> str:
         f'<script async defer src="{host}/js/cusdis.es.js"></script>'
         f"</div>"
     )
-    return html + widget
+    return html
 
 
 # ---------------------------------------------------------------------------

@@ -277,3 +277,5 @@ span.linenos.special {
 .highlight .vi { color: #eeac9a }
 .highlight .vm { color: #c5e4f9 }
 .highlight .il { color: #f9d8d1 }
+
+article{max-width:unset!important}

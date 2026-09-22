@@ -32,6 +32,40 @@ title: Category - iccd-devlogs
   -->
 
 
+## [Intrepid Couch Co-Op Duel Devlogs #4](https://blog.josephhansen.dev/blog/iccd-devlogs-4/)
+
+<!--suppress LongLine -->
+<div class="post-extra">
+    <div class="col">
+        <p class="post-date">2026-09-16 20:36:06</p>
+    </div>
+    <div class="col">
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/game-development/">#game-development</a>
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/insanity/">#insanity</a>
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/csharp/">#csharp</a>
+    
+    </div>
+</div>
+
+# Intrepid Couch Co-Op Duel Devlogs #4
+
+Building my couch co-op battle game, day 4- splitscreen cameras
+
+
+
+
+<div class="post-link">
+
+    <a href="https://blog.josephhansen.dev/blog/iccd-devlogs-4/" title="Intrepid Couch Co-Op Duel Devlogs #4">
+        Read more
+    </a>
+
+</div>
+
+
 ## [Intrepid Couch Co-Op Duel Devlogs #3](https://blog.josephhansen.dev/blog/iccd-devlogs-3/)
 
 <!--suppress LongLine -->

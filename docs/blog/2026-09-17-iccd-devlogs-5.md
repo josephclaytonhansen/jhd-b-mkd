@@ -3,7 +3,7 @@ title: "Intrepid Couch Co-Op Duel Devlogs #5"
 date: 2026-09-17 20:36:06
 slug: iccd-devlogs-5
 publish: false
-description: "Building a fun, dumb, split-screen battle game, day 5- port simplified brain"
+description: "Building my couch co-op battle game, day 5- port simplified brain"
 featured_image: 
 tags: [game-development, insanity, csharp]
 categories:
@@ -12,7 +12,7 @@ categories:
 
 # Intrepid Couch Co-Op Duel Devlogs #5 - port simplified brain
 
-Building a fun, dumb, split-screen battle game, day 4- splitscreen cameras
+Building my couch co-op battle game, day 5- port simplified brain
 
 <!-- more -->
 

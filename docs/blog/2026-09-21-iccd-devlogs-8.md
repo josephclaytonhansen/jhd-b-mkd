@@ -3,7 +3,7 @@ title: "Intrepid Couch Co-Op Duel Devlogs #8"
 date: 2026-09-21 20:36:06
 slug: iccd-devlogs-8
 publish: false
-description: "Building a fun, dumb, split-screen battle game, day 8- using brain events to control flow"
+description: "Building my couch co-op battle game, day 8- using brain events to control flow"
 featured_image:
 tags: [game-development, insanity, csharp]
 categories:
@@ -12,7 +12,7 @@ categories:
 
 # Intrepid Couch Co-Op Duel Devlogs #8
 
-Building a fun, dumb, split-screen battle game, day 8- using brain events to control flow
+Building my couch co-op battle game, day 8- using brain events to control flow
 
 <!-- more -->
 

@@ -279,3 +279,7 @@ span.linenos.special {
 .highlight .il { color: #f9d8d1 }
 
 article{max-width:unset!important}
+
+div#page-header.flex.items-start.justify-between div button.secondary.cursor-pointer, #toc .flex :nth-child(2n) {
+  display: none!important;
+}

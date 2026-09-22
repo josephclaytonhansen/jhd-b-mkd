@@ -32,6 +32,42 @@ title: Blog
   -->
 
 
+## [Intrepid Couch Co-Op Duel Devlogs #5](https://blog.josephhansen.dev/blog/iccd-devlogs-5/)
+
+<!--suppress LongLine -->
+<div class="post-extra">
+    <div class="col">
+        <p class="post-date">2026-09-17 20:36:06</p>
+    </div>
+    <div class="col">
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/game-development/">#game-development</a>
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/insanity/">#insanity</a>
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/csharp/">#csharp</a>
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/noodles/">#noodles</a>
+    
+    </div>
+</div>
+
+# Intrepid Couch Co-Op Duel Devlogs #5 - port simplified brain
+
+Building my couch co-op battle game, day 5- port simplified brain
+
+
+
+
+<div class="post-link">
+
+    <a href="https://blog.josephhansen.dev/blog/iccd-devlogs-5/" title="Intrepid Couch Co-Op Duel Devlogs #5">
+        Read more
+    </a>
+
+</div>
+
+
 ## [Intrepid Couch Co-Op Duel Devlogs #4](https://blog.josephhansen.dev/blog/iccd-devlogs-4/)
 
 <!--suppress LongLine -->

@@ -4,7 +4,7 @@ date: 2026-09-15 20:36:06
 slug: iccd-devlogs-3
 publish: true
 description: "Building a fun, dumb, split-screen battle game, day 3- rendering the divider as a smooth line"
-featured_image:
+featured_image: "images/iccd_day3_fig1.png"
 tags: [game-development, insanity, csharp, catmull-rom]
 categories:
   - iccd-devlogs

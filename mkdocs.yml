@@ -21,6 +21,10 @@ hooks:
 
 plugins:
   - search
+  - pub-social:
+      og:
+        enabled: true
+        locale: en_US
   - pub-meta:
       publish:
         file_default: draft

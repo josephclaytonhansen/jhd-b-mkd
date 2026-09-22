@@ -4,7 +4,7 @@ date: 2026-09-14 20:36:06
 slug: iccd-devlogs-2
 publish: true
 description: "Building a fun, dumb, split-screen battle game, day 2- fixing divider gaps"
-featured_image:
+featured_image: "images/iccd_day2_fig1.png"
 tags: [game-development, insanity, csharp]
 categories:
   - iccd-devlogs

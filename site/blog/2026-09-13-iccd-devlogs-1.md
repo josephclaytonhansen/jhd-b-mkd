@@ -4,7 +4,7 @@ date: 2026-09-13 20:36:06
 slug: iccd-devlogs-1
 publish: true
 description: "Building a fun, dumb, split-screen battle game, day 1- basic divider structure"
-featured_image:
+featured_image: "images/iccd_day1_fig2.png"
 tags: [game-development, insanity, csharp]
 categories:
   - iccd-devlogs

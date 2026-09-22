@@ -280,6 +280,29 @@ span.linenos.special {
 
 article{max-width:unset!important}
 
-div#page-header.flex.items-start.justify-between div button.secondary.cursor-pointer, #toc .flex :nth-child(2n) {
+div#page-header.flex.items-start.justify-between div button.secondary.cursor-pointer, #toc .flex :nth-child(2n),  .post-card-text h1{
   display: none!important;
+}
+
+.post-extra a {
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 2px;
+	font-size: .7rem;
+}
+
+.post-extra a:nth-of-type(1) {
+	background-color: sienna;
+}
+
+.post-extra a:nth-of-type(4) {
+	background-color: darkolivegreen;
+}
+
+.post-extra a:nth-of-type(2) {
+	background-color: steelblue;
+}
+
+.post-extra a:nth-of-type(3) {
+	background-color: slategray;
 }

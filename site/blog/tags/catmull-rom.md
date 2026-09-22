@@ -2,8 +2,8 @@
 publish: 'true'
 search:
   exclude: true
-slug: devlogs
-title: Category - iccd-devlogs
+slug: rom
+title: Tag - catmull-rom
 
 ---
 
@@ -62,74 +62,6 @@ Building a fun, dumb, split-screen battle game, day 3- rendering the divider as 
 <div class="post-link">
 
     <a href="https://blog.josephhansen.dev/blog/iccd-devlogs-3/" title="Intrepid Couch Co-Op Duel Devlogs #3">
-        Read more
-    </a>
-
-</div>
-
-
-## [Intrepid Couch Co-Op Duel Devlogs #2](https://blog.josephhansen.dev/blog/iccd-devlogs-2/)
-
-<!--suppress LongLine -->
-<div class="post-extra">
-    <div class="col">
-        <p class="post-date">2026-09-14 20:36:06</p>
-    </div>
-    <div class="col">
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/game-development/">#game-development</a>
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/insanity/">#insanity</a>
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/csharp/">#csharp</a>
-    
-    </div>
-</div>
-
-# Intrepid Couch Co-Op Duel Devlogs #2
-
-Building a fun, dumb, split-screen battle game, day 2- fixing divider gaps
-
-
-
-
-<div class="post-link">
-
-    <a href="https://blog.josephhansen.dev/blog/iccd-devlogs-2/" title="Intrepid Couch Co-Op Duel Devlogs #2">
-        Read more
-    </a>
-
-</div>
-
-
-## [Intrepid Couch Co-Op Duel Devlogs #1](https://blog.josephhansen.dev/blog/iccd-devlogs-1/)
-
-<!--suppress LongLine -->
-<div class="post-extra">
-    <div class="col">
-        <p class="post-date">2026-09-13 20:36:06</p>
-    </div>
-    <div class="col">
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/game-development/">#game-development</a>
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/insanity/">#insanity</a>
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/csharp/">#csharp</a>
-    
-    </div>
-</div>
-
-# Intrepid Couch Co-Op Duel Devlogs #1
-
-Building a fun, dumb, split-screen battle game, day 1- basic divider structure
-
-
-
-
-<div class="post-link">
-
-    <a href="https://blog.josephhansen.dev/blog/iccd-devlogs-1/" title="Intrepid Couch Co-Op Duel Devlogs #1">
         Read more
     </a>
 

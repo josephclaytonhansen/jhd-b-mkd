@@ -18,6 +18,8 @@
 
 
 
+<meta name="description" content="Building a fun, dumb, split-screen battle game, day 1- basic divider structure">
+
 
 
 
@@ -35,6 +37,8 @@
 
 
 
+<meta property="og:description" content="Building a fun, dumb, split-screen battle game, day 1- basic divider structure">
+
 
 
 <meta property="og:url" content="https://blog.josephhansen.dev/blog/iccd-devlogs-1/">
@@ -50,10 +54,34 @@
 
 
 
+<meta name="twitter:description" content="Building a fun, dumb, split-screen battle game, day 1- basic divider structure">
+
 
 
 
 <!-- JSON-LD Structured Data -->
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Intrepid Couch Co-Op Duel Devlogs #1",
+    "url": "https://blog.josephhansen.dev/blog/iccd-devlogs-1/",
+    "description": "Building a fun, dumb, split-screen battle game, day 1- basic divider structure",
+    
+    
+    
+    "datePublished": "2026-09-13 20:36:06",
+    
+    
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://blog.josephhansen.dev/blog/iccd-devlogs-1/"
+    },
+    
+    
+  }
+  </script>
 
 
 
@@ -313,7 +341,7 @@
           
           <a data-slot="button" id="previous-button"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-            href="/blog/tags/work-stuff/">
+            href="/blog/iccd-devlogs-2/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="tabler-icon tabler-icon-arrow-left">
@@ -347,7 +375,7 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <p>Building a fun, dumb, split-screen battle game, day 1- basic divider structure</p>
+    <div class="post-tags-bar"><a class="post-tag-link" href="/blog/tags/game-development/">game-development</a><a class="post-tag-link" href="/blog/tags/insanity/">insanity</a><a class="post-tag-link" href="/blog/tags/csharp/">csharp</a></div><p>Building a fun, dumb, split-screen battle game, day 1- basic divider structure</p>
 <!-- more -->
 
 <p><em>Song of the day:</em></p>
@@ -390,11 +418,10 @@
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p">}</span>
 </code></pre></div>
 <p>With a simple manager to control spawning all the blocks, so that blocks are only aware of themselves and what's happening to them (being self-centered is bad for humans but excellent for object oriented programming), I have exactly what I wanted:
-<figure id="_figure-1"><img alt="iccd_day1_fig1.png" loading="lazy" src="..\..\images\iccd_day1_fig1.png"><figcaption>Figure 1: iccd_day1_fig1.png</figcaption></figure></p>
+<figure id="_figure-1"><img alt="Divider wall" loading="lazy" src="..\..\images\iccd_day1_fig1.png"><figcaption>Figure 1: Divider wall</figcaption></figure></p>
 <p>I also built a simple spawner that creates projectiles on click, just so there's something to interact with the colliders.</p>
 <p>Of course, nothing is ever quite so simple as you plan it to be. I quickly realized that my divider strategy didn't work well as blocks moved away from each other, creating gaps that projectiles can move through:
-<figure id="_figure-2"><img alt="iccd_day1_fig2.png" loading="lazy" src="..\..\images\iccd_day1_fig2.png"><figcaption>Figure 2: iccd_day1_fig2.png</figcaption></figure></p>
-<figure id="_figure-2"><img alt="iccd_day1_fig2.png" loading="lazy" src="..\images\iccd_day1_fig2.png"><figcaption>Figure 2: iccd_day1_fig2.png</figcaption></figure></p>
+<figure id="_figure-2"><img alt="Oh no, that's a hole" loading="lazy" src="..\..\images\iccd_day1_fig2.png"><figcaption>Figure 2: Oh no, that's a hole</figcaption></figure></p>
 <p>That, however, is a tomorrow me problem. Right now my newborn-ish is a today me problem.</p>
   </div>
   
@@ -408,7 +435,7 @@
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
-        href="/blog/tags/work-stuff/">
+        href="/blog/iccd-devlogs-2/">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-left ">
@@ -416,7 +443,7 @@
             <path d="M5 12l6 6"></path>
             <path d="M5 12l6 -6"></path>
         </svg>
-        <span class="max-[500px]:hidden">work-stuff</span>
+        <span class="max-[500px]:hidden">Intrepid Couch Co-Op Duel Devlogs #2</span>
     </a>
     
     

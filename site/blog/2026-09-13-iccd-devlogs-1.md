@@ -3,9 +3,9 @@ title: "Intrepid Couch Co-Op Duel Devlogs #1"
 date: 2026-09-13 20:36:06
 slug: iccd-devlogs-1
 publish: true
-description:
+description: "Building a fun, dumb, split-screen battle game, day 1- basic divider structure"
 featured_image:
-tags: []
+tags: [game-development, insanity, csharp]
 categories:
   - iccd-devlogs
 ---
@@ -67,11 +67,11 @@ private void SnapBack()
 ```
 
 With a simple manager to control spawning all the blocks, so that blocks are only aware of themselves and what's happening to them (being self-centered is bad for humans but excellent for object oriented programming), I have exactly what I wanted:
-![iccd_day1_fig1.png](images/iccd_day1_fig1.png)
+![Divider wall](images/iccd_day1_fig1.png)
 
 I also built a simple spawner that creates projectiles on click, just so there's something to interact with the colliders.
 
 Of course, nothing is ever quite so simple as you plan it to be. I quickly realized that my divider strategy didn't work well as blocks moved away from each other, creating gaps that projectiles can move through:
-![iccd_day1_fig2.png](images/iccd_day1_fig2.png)
+![Oh no, that's a hole](images/iccd_day1_fig2.png)
 
 That, however, is a tomorrow me problem. Right now my newborn-ish is a today me problem.

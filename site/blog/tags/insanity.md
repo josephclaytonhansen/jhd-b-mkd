@@ -2,8 +2,8 @@
 publish: 'true'
 search:
   exclude: true
-slug: .
-title: Blog
+slug: insanity
+title: Tag - insanity
 
 ---
 
@@ -130,39 +130,6 @@ Building a fun, dumb, split-screen battle game, day 1- basic divider structure
 <div class="post-link">
 
     <a href="https://blog.josephhansen.dev/blog/iccd-devlogs-1/" title="Intrepid Couch Co-Op Duel Devlogs #1">
-        Read more
-    </a>
-
-</div>
-
-
-## [Baroquification](https://blog.josephhansen.dev/blog/baroquification/)
-
-<!--suppress LongLine -->
-<div class="post-extra">
-    <div class="col">
-        <p class="post-date">2026-04-23 14:41:00</p>
-    </div>
-    <div class="col">
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/blue-cheese/">#blue-cheese</a>
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/work-stuff/">#work-stuff</a>
-    
-        <a href="https://blog.josephhansen.dev/blog/tags/Fetty-Wap/">#Fetty-Wap</a>
-    
-    </div>
-</div>
-
-# Baroquification
-At work, I was tasked with making the *Battle Hymn of the Republic* into a Baroque version (interpreted; the word used was actually "harpsichordy"), to be used as background music for a game scene set roughly around that time.
-
-
-
-
-<div class="post-link">
-
-    <a href="https://blog.josephhansen.dev/blog/baroquification/" title="Baroquification">
         Read more
     </a>
 

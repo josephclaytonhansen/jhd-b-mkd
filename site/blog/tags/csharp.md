@@ -32,6 +32,40 @@ title: Tag - csharp
   -->
 
 
+## [Intrepid Couch Co-Op Duel Devlogs #6](https://blog.josephhansen.dev/blog/iccd-devlogs-6/)
+
+<!--suppress LongLine -->
+<div class="post-extra">
+    <div class="col">
+        <p class="post-date">2026-09-20 20:36:06</p>
+    </div>
+    <div class="col">
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/game-development/">#game-development</a>
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/insanity/">#insanity</a>
+    
+        <a href="https://blog.josephhansen.dev/blog/tags/csharp/">#csharp</a>
+    
+    </div>
+</div>
+
+# Intrepid Couch Co-Op Duel Devlogs #6- winning gauge
+
+Building my couch co-op battle game, day 7- winning gauge
+
+
+
+
+<div class="post-link">
+
+    <a href="https://blog.josephhansen.dev/blog/iccd-devlogs-6/" title="Intrepid Couch Co-Op Duel Devlogs #6">
+        Read more
+    </a>
+
+</div>
+
+
 ## [Intrepid Couch Co-Op Duel Devlogs #5](https://blog.josephhansen.dev/blog/iccd-devlogs-5/)
 
 <!--suppress LongLine -->

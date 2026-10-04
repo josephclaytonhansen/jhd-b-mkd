@@ -113,9 +113,9 @@ def _normalize_image_path(featured_path: str, page_url: str) -> str:
     if "blog/archive/" in page_url:
         return f"../../../images/{filename}"
     
-    # Post pages are at blog/{slug}/ — 2 levels deep, need /../../images (absolute path)
+    # Post pages are at blog/{slug}/ — use absolute path /images
     if "blog/" in page_url:
-        return f"/../../images/{filename}"
+        return f"/images/{filename}"
     
     return featured_path
 

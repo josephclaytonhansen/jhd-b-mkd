@@ -86,6 +86,41 @@ def on_pre_build(config):
 
 
 # ---------------------------------------------------------------------------
+# Image path normalization based on page location
+# ---------------------------------------------------------------------------
+
+def _normalize_image_path(featured_path: str, page_url: str) -> str:
+    """Normalize image paths based on page location depth."""
+    if not featured_path:
+        return featured_path
+    
+    # Extract filename from the featured_path (handles both relative and absolute paths)
+    # e.g., "images/file.png", "../images/file.png", "/images/file.png"
+    if "/" not in featured_path:
+        filename = featured_path
+    else:
+        filename = featured_path.split("/")[-1]
+    
+    # Tag pages are at blog/tags/{tag}/ — 3 levels deep, need ../../../images
+    if "blog/tags/" in page_url:
+        return f"../../../images/{filename}"
+    
+    # Category pages are at blog/categories/{category}/ — 3 levels deep, need ../../../images
+    if "blog/categories/" in page_url:
+        return f"../../../images/{filename}"
+    
+    # Archive pages are at blog/archive/{year}/ — 3 levels deep, need ../../../images
+    if "blog/archive/" in page_url:
+        return f"../../../images/{filename}"
+    
+    # Post pages are at blog/{slug}/ — 2 levels deep, need ../../images
+    if "blog/" in page_url:
+        return f"../../images/{filename}"
+    
+    return featured_path
+
+
+# ---------------------------------------------------------------------------
 # List page: wrap each post card with a category bar + optional featured image
 # ---------------------------------------------------------------------------
 
@@ -97,7 +132,7 @@ _CARD_PATTERN = re.compile(
 )
 
 
-def _process_list_page(html: str) -> str:
+def _process_list_page(html: str, page_url: str = "") -> str:
     def replace_card(m: re.Match) -> str:
         slug = m.group(1)
         original = m.group(0)
@@ -118,9 +153,10 @@ def _process_list_page(html: str) -> str:
 
         featured = _slug_featured.get(slug, "")
         if featured:
+            normalized_featured = _normalize_image_path(featured, page_url)
             img_div = (
                 f'<div class="post-card-image">'
-                f'<img src="{featured}" alt="Featured image" loading="lazy">'
+                f'<img src="{normalized_featured}" alt="Featured image" loading="lazy">'
                 f"</div>"
             )
             text_div = f'<div class="post-card-text">{original}</div>'
@@ -143,15 +179,16 @@ def _process_list_page(html: str) -> str:
 # Post page: inject tags bar and featured image banner
 # ---------------------------------------------------------------------------
 
-def _process_post_page(html: str, page) -> str:
+def _process_post_page(html: str, page, page_url: str = "") -> str:
     injected = ""
 
     # Featured image banner (full-width, above everything)
     featured = page.meta.get("featured_image", "")
     if featured:
+        normalized_featured = _normalize_image_path(featured, page_url)
         injected += (
             f'<div class="featured-image-banner">'
-            f'<img src="{featured}" alt="Featured image">'
+            f'<img src="{normalized_featured}" alt="Featured image">'
             f"</div>"
         )
 
@@ -240,12 +277,14 @@ def on_page_content(html, page, config, files):
     is_list_page = "post-extra" in html
     # A post page has a date in meta and is not a list page
     is_post_page = bool(page.meta.get("date")) and not is_list_page
+    
+    page_url = page.url or ""
 
     if is_list_page:
-        html = _process_list_page(html)
+        html = _process_list_page(html, page_url)
 
     if is_post_page:
-        html = _process_post_page(html, page)
+        html = _process_post_page(html, page, page_url)
         cusdis_cfg = config.get("extra", {}).get("cusdis", {})
         if cusdis_cfg:
             html = _inject_cusdis(html, page, cusdis_cfg)

@@ -226,7 +226,7 @@
 </div>
 <h2 id="filling-them-in">Filling Them In<a class="headerlink" href="#filling-them-in" title="Permanent link">¶</a></h2>
 <p>My plan, coming from a 3D modeling background, was adaptive subdivision: if the space between two blocks (N) increases by 3x (<em>3N</em>), add another block between them. Update the block to reflect the new neighbors, then recurse in both directions. </p>
-<p><figure id="_figure-1"><img alt="Adaptive Subdivision with Recursive Neighbor Assignments" loading="lazy" src="..\images\iccd_day2_fig1.png"/><figcaption>Figure 1: Adaptive Subdivision with Recursive Neighbor Assignments</figcaption></figure></p>
+<p><figure id="_figure-1"><img alt="Adaptive Subdivision with Recursive Neighbor Assignments" loading="lazy" src="/images/iccd_day2_fig1.png"/><figcaption>Figure 1: Adaptive Subdivision with Recursive Neighbor Assignments</figcaption></figure></p>
 <p>While this works well enough for <em>adding</em> filler blocks, it is of course also necessary to <em>remove</em> them as needed to prevent both overlapping blocks when density shrinks and massive piles of garbage. I didn't want to remove filler bocks when their adjacent distance was exactly N, since it's unlikely that that will happen at all (see above); I settled for <em>1.5N</em> as a value after messing around; I don't have a scientific reason for that number, it just felt good. </p>
 <p>My first test ran into two major problems:</p>
 <ol>

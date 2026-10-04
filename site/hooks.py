@@ -204,6 +204,19 @@ def _process_post_page(html: str, page, page_url: str = "") -> str:
     if injected:
         html = injected + html
 
+    # Fix inline figure images: convert backslash paths to forward slash absolute paths
+    # Pattern: src="..\images\filename.png" or similar -> src="/images/filename.png"
+    def fix_inline_img_src(m: re.Match) -> str:
+        src_value = m.group(1)
+        # Extract filename from any path format (backslash or forward slash)
+        if "\\" in src_value:
+            filename = src_value.split("\\")[-1]
+        else:
+            filename = src_value.split("/")[-1]
+        return f'src="/images/{filename}"'
+
+    html = re.sub(r'src="([^"]*(?:\\|/)images[^"]*)"', fix_inline_img_src, html)
+
     return html
 
 
